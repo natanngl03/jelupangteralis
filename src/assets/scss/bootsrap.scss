@@ -1,0 +1,27 @@
+$focus-ring-width: 0 !default;
+$focus-ring-opacity: 0 !default;
+$focus-ring-color: none !default;
+$focus-ring-blur: 0 !default;
+$focus-ring-box-shadow: none;
+
+$font-family-sans-serif: "Poppins", sans-serif;
+
+$primary: #2b3a67;
+$light: #f7f7f2;
+$black: #1d2325;
+$secondary: #d0a425 !default;
+$success: #25d366;
+
+$spacer: 1rem;
+$spacers: (
+   0: 0,
+   1: $spacer * 0.25,
+   2: $spacer * 0.5,
+   3: $spacer,
+   4: $spacer * 1.5,
+   5: $spacer * 3,
+   6: $spacer * 4,
+   7: $spacer * 5,
+);
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";

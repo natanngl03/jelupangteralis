@@ -1,0 +1,42 @@
+.navbar-brand {
+   width: 40%;
+   cursor: pointer;
+}
+
+.header-wrapper {
+   width: 100%;
+   height: 200px;
+   position: relative;
+}
+
+.header-wrapper::after {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background: rgba(0, 0, 0, 0.5);
+}
+
+.header-wrapper img {
+   object-fit: cover;
+   object-position: 50% 70%;
+}
+
+.header-wrapper .title-wrapper {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   z-index: 1;
+}
+
+.header-wrapper .title {
+   margin: auto;
+}
+
+@media (min-width: 991.98px) {
+   .navbar-brand {
+      width: 20%;
+   }
+}
