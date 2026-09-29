@@ -10,11 +10,13 @@ import Faq from "../components/Faq/Faq";
 import Testimonial from "../components/Testimonial/Testimonial";
 import Hero from "../components/Hero/Hero";
 import Location from "../components/Location/Location";
+import Helmet from "../components/ui/Helmet";
 
 export default function Home() {
    useEffect(() => {}, []);
    return (
       <Fragment>
+         <Helmet title="Beranda | Jelupang Jaya Pasir" />
          <Hero />
          <About />
          <ExperienceDivider />

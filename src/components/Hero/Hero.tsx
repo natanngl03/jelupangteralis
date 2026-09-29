@@ -15,18 +15,11 @@ export default function Hero() {
 
    return (
       <div className="header-carousel owl-carousel">
-         <div className="header-carousel-item">
-            <img src="/img/car/carousel-1.webp" className="img-fluid w-100" alt="Image" />
-         </div>
-         <div className="header-carousel-item">
-            <img src="/img/car/carousel-2.webp" className="img-fluid w-100" alt="Image" />
-         </div>
-         <div className="header-carousel-item">
-            <img src="/img/car/carousel-3.webp" className="img-fluid w-100" alt="Image" />
-         </div>
-         <div className="header-carousel-item">
-            <img src="/img/car/carousel-4.webp" className="img-fluid w-100" alt="Image" />
-         </div>
+         {[...Array(4)].map((_, idx) => (
+            <div className="header-carousel-item">
+               <img src={`/img/car/carousel-${idx + 1}.webp`} className="img-fluid w-100" alt="Image" loading="lazy" />
+            </div>
+         ))}
       </div>
    );
 }
