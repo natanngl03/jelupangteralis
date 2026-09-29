@@ -18,7 +18,7 @@ export default function VideoSection() {
                   Video <span className="text-primary">Gallery</span>
                </h2>
                <p className="text-center text-lg-start mb-5">Sebagai referensi untuk anda, berikut kami kumpulkan video saat pengerjaan dilapangan</p>
-               <a href="" className="btn border border-2 border-primary text-primary fw-bold d-none d-lg-inline">
+               <a href="/videos" className="btn border border-2 border-primary text-primary fw-bold d-none d-lg-inline">
                   Temukan Video Lainnya
                   <FaArrowRight className="ms-2" />
                </a>
