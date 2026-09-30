@@ -1,11 +1,13 @@
 import Header from "../components/ui/Header";
 import PortofolioGallery from "../components/Portofolio/PortofolioGallery";
-import { Helmet } from "react-helmet";
+import { Head } from "vite-react-ssg";
 
 export default function Portofolio() {
    return (
       <>
-         <Helmet title="Portofolio | Jelupang Jaya Pasir" />
+         <Head>
+            <title>Portofolio | Jelupang Jaya Teralis</title>
+         </Head>
          <Header title="Potofolio Kami" />
          <PortofolioGallery />
       </>

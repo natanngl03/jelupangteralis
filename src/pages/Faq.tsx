@@ -1,11 +1,13 @@
+import { Head } from "vite-react-ssg";
 import FaqSection from "../components/Faq/Faq";
 import Header from "../components/ui/Header";
-import Helmet from "../components/ui/Helmet";
 
 export default function Faq() {
    return (
       <>
-         <Helmet title="Pertanyaan | Jelupang Jaya Pasir" />
+         <Head>
+            <title>Pertanyaan | Jelupang Jaya Teralis</title>
+         </Head>
          <Header title="Pertanyaan" />
          <FaqSection />
       </>

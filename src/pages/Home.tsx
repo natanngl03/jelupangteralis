@@ -10,13 +10,15 @@ import Faq from "../components/Faq/Faq";
 import Testimonial from "../components/Testimonial/Testimonial";
 import Hero from "../components/Hero/Hero";
 import Location from "../components/Location/Location";
-import Helmet from "../components/ui/Helmet";
+import { Head } from "vite-react-ssg";
 
 export default function Home() {
    useEffect(() => {}, []);
    return (
       <Fragment>
-         <Helmet title="Beranda | Jelupang Jaya Pasir" />
+         <Head>
+            <title>Beranda | Jelupang Jaya Teralis</title>
+         </Head>
          <Hero />
          <About />
          <ExperienceDivider />

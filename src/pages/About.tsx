@@ -2,12 +2,14 @@ import Header from "../components/ui/Header";
 import AboutSection from "./../components/About/About";
 import ExperienceDivider from "../components/SectionDivider/ExperienceDivider";
 import Location from "../components/Location/Location";
-import Helmet from "../components/ui/Helmet";
+import { Head } from "vite-react-ssg";
 
 export default function About() {
    return (
       <>
-         <Helmet title="Tentang | Jelupang Jaya Pasir" />
+         <Head>
+            <title>Tentang Kami | Jelupang Jaya Teralis</title>
+         </Head>
          <Header title="Tentang Kami" />
          <AboutSection withoutTitle />
          <ExperienceDivider />

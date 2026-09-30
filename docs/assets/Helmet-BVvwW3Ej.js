@@ -1,1 +1,0 @@
-import{i as e,t}from"./compiler-runtime-CwWBd4hD.js";import{n}from"./Section-DtU5WLhq.js";var r=t(),i=e();function a(e){let t=(0,r.c)(2),{title:a}=e,o;return t[0]===a?o=t[1]:(o=(0,i.jsx)(n,{children:(0,i.jsx)(`title`,{children:a})}),t[0]=a,t[1]=o),o}export{a as t};
