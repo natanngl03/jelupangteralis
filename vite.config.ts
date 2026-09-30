@@ -12,7 +12,7 @@ export default defineConfig({
       sitemap({
          hostname: "https://jelupangteralis.com",
          outDir: "docs",
-         dynamicRoutes: ["/", "/about", "/faq", "/portofolio", "/videos", "/service", "/testimonial"],
+         dynamicRoutes: ["/about", "/faq", "/portofolio", "/videos", "/service", "/testimonial"],
       }),
    ],
    build: {
