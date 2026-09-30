@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation, Link, type Location } from "react-router-dom";
+import { useLocation, type Location } from "react-router-dom";
 import { RiMenu5Fill } from "react-icons/ri";
 import { Offcanvas, OffcanvasBody, OffcanvasHeader } from "reactstrap";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
@@ -80,13 +80,13 @@ const NavMenu = ({ onClick = () => {}, location }: { onClick?: () => void; locat
                </li>
             ) : (
                <li key={idx}>
-                  <Link
-                     to={item.href}
+                  <a
+                     href={item.href}
                      className={`text-decoration-none fw-semibold d-block w-100 ${location.pathname === item.href ? "text-secondary" : "text-primary"}`}
                      onClick={onClick}
                   >
                      {item.label}
-                  </Link>
+                  </a>
                </li>
             ),
          )}
@@ -122,13 +122,13 @@ const NavDropdown = ({
             <DropdownItem header>{linkName}</DropdownItem>
             {items.map((item, idx) => (
                <DropdownItem key={idx} className="btn btn-secondary">
-                  <Link
-                     to={item.href}
+                  <a
+                     href={item.href}
                      className={`text-decoration-none fw-semibold d-block w-100 ${location.pathname === item.href ? "text-secondary" : "text-primary"}`}
                      onClick={onClick}
                   >
                      {item.label}
-                  </Link>
+                  </a>
                </DropdownItem>
             ))}
          </DropdownMenu>
