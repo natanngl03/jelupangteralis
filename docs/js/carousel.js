@@ -7,7 +7,7 @@
       items: 1,
       autoplay: true,
       smartSpeed: 500,
-      dots: true,
+      dots: false,
       loop: true,
       nav: true,
       navText: [

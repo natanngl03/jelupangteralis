@@ -1,81 +1,139 @@
-.header-carousel {
+/* =========================================================
+   HERO WRAPPER
+   Ini yang mengunci tinggi layout sejak awal.
+   ========================================================= */
+
+.hero-wrapper {
+   position: relative;
+   width: 100%;
+   height: clamp(250px, 40vw, 450px);
+}
+
+/* =========================================================
+   OWL CAROUSEL
+   ========================================================= */
+
+.hero-wrapper .header-carousel {
+   position: absolute;
+   inset: 0;
+
+   width: 100%;
+   height: 100%;
+}
+
+/* =========================================================
+   OWL ITEM
+   ========================================================= */
+
+.hero-wrapper .header-carousel-item {
+   position: relative;
+
+   width: 100%;
+   height: 100%;
+
+   overflow: hidden;
+}
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.hero-wrapper .hero-image {
+   display: block;
+
+   width: 100%;
+   height: 100%;
+
+   max-width: none;
+
+   object-fit: cover;
+   object-position: center 20%;
+}
+
+/* =========================================================
+   OWL STRUCTURE
+   ========================================================= */
+
+.hero-wrapper .owl-stage-outer,
+.hero-wrapper .owl-stage,
+.hero-wrapper .owl-item {
+   height: 100%;
+}
+
+.hero-wrapper .owl-stage {
    position: relative;
 }
 
-.header-carousel .owl-nav .owl-prev {
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.hero-wrapper .owl-nav .owl-prev,
+.hero-wrapper .owl-nav .owl-next {
    position: absolute;
+
+   top: 50%;
+   transform: translateY(-50%);
+
    width: 40px;
    height: 40px;
-   top: 50%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   border: 0;
+   border-radius: 60px;
+
+   background: var(--bs-primary);
+   color: var(--bs-white);
+
+   font-size: 26px;
+
+   transition: 0.5s;
+
+   z-index: 10;
+}
+
+.hero-wrapper .owl-nav .owl-prev {
    left: 20px;
-   transform: translateY(-50%);
-   border-radius: 60px;
-   background: var(--bs-primary);
-   color: var(--bs-white);
-   font-size: 26px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   transition: 0.5s;
 }
 
-.header-carousel .owl-nav .owl-next {
-   position: absolute;
-   width: 40px;
-   height: 40px;
-   top: 50%;
+.hero-wrapper .owl-nav .owl-next {
    right: 20px;
-   transform: translateY(-50%);
-   border-radius: 60px;
-   background: var(--bs-primary);
-   color: var(--bs-white);
-   font-size: 26px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   transition: 0.5s;
 }
 
-.header-carousel .owl-nav .owl-prev,
-.header-carousel .owl-nav .owl-next {
-   transition: 0.5s;
-}
+/* =========================================================
+   HOVER
+   ========================================================= */
 
-.header-carousel .owl-nav .owl-prev:hover,
-.header-carousel .owl-nav .owl-next:hover {
+.hero-wrapper .owl-nav .owl-prev:hover,
+.hero-wrapper .owl-nav .owl-next:hover {
    box-shadow: inset 100px 0 0 0 var(--bs-light) !important;
    color: var(--bs-primary) !important;
 }
 
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 576px) {
-   .header-carousel .owl-nav .owl-prev,
-   .header-carousel .owl-nav .owl-next {
-      top: 50%;
-      transition: 0.5s;
+   .hero-wrapper {
+      height: 250px;
    }
-}
 
-.header-carousel .header-carousel-item,
-.header-carousel .header-carousel-item img {
-   position: relative;
-   width: 100%;
-   /* height: 700px; */
-   /* height: 80dvh; */
-   /* height: 35dvh; */
-   display: block;
-   object-fit: cover;
-   object-position: center 20%;
-   height: 80dvh;
-   /* background-size: cover; */
-   /* background-position: center 550px; */
-   transition: 0.5s;
-}
+   .hero-wrapper .owl-nav .owl-prev,
+   .hero-wrapper .owl-nav .owl-next {
+      width: 35px;
+      height: 35px;
+      font-size: 22px;
+   }
 
-@media (max-width: 992px) {
-   .header-carousel .header-carousel-item,
-   .header-carousel .header-carousel-item img {
-      margin-top: 0;
-      transition: 0.5s;
-      height: 100%;
+   .hero-wrapper .owl-nav .owl-prev {
+      left: 10px;
+   }
+
+   .hero-wrapper .owl-nav .owl-next {
+      right: 10px;
    }
 }

@@ -4,7 +4,9 @@ import "./style.css";
 export default function Hero() {
    useEffect(() => {
       const script = document.createElement("script");
+
       script.src = "/js/carousel.js";
+      script.async = true;
 
       document.body.appendChild(script);
 
@@ -14,12 +16,23 @@ export default function Hero() {
    }, []);
 
    return (
-      <div className="header-carousel owl-carousel">
-         {[...Array(4)].map((_, idx) => (
-            <div className="header-carousel-item">
-               <img src={`/img/car/carousel-${idx + 1}.webp`} className="img-fluid w-100" alt="Image" loading="lazy" />
-            </div>
-         ))}
-      </div>
+      <section className="hero-wrapper">
+         <div className="header-carousel owl-carousel">
+            {[...Array(4)].map((_, idx) => (
+               <div className="header-carousel-item" key={idx}>
+                  <img
+                     src={`/img/car/carousel-${idx + 1}.webp`}
+                     className="hero-image"
+                     alt="Jelupang Jaya Teralis"
+                     width="1920"
+                     height="1080"
+                     loading={idx === 0 ? "eager" : "lazy"}
+                     fetchPriority={idx === 0 ? "high" : "auto"}
+                     decoding="async"
+                  />
+               </div>
+            ))}
+         </div>
+      </section>
    );
 }

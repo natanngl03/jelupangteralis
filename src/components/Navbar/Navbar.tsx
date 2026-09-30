@@ -34,6 +34,8 @@ export default function Navbar() {
       window.location.href = "/";
    };
 
+   console.log("location 1", location);
+
    return (
       <div className="sticky-top">
          <nav className="bg-white border-bottom">
@@ -71,6 +73,8 @@ export default function Navbar() {
 }
 
 const NavMenu = ({ onClick = () => {}, location }: { onClick?: () => void; location: Location<any> }) => {
+   console.log("location 2", location);
+
    return (
       <ul className={`p-0 m-0 d-flex flex-column flex-lg-row align-items-lg-center gap-4 list-unstyled`}>
          {Menu.map((item, idx) =>
@@ -97,6 +101,8 @@ const NavMenu = ({ onClick = () => {}, location }: { onClick?: () => void; locat
 const NavDropdown = ({ linkName, items, location }: { linkName: string; items: Array<{ label: string; href: string }>; location: Location<any> }) => {
    const [dropdownOpen, setDropdownOpen] = useState(false);
    const toggle = () => setDropdownOpen((prevState) => !prevState);
+
+   console.log("location 3", location);
 
    const isActive = () => {
       return items.some((x) => x.href === location.pathname);
