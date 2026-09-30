@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation, type Location } from "react-router-dom";
+import { useLocation, Link, type Location } from "react-router-dom";
 import { RiMenu5Fill } from "react-icons/ri";
 import { Offcanvas, OffcanvasBody, OffcanvasHeader } from "reactstrap";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
@@ -33,8 +33,6 @@ export default function Navbar() {
    const logoOnClick = () => {
       window.location.href = "/";
    };
-
-   console.log("location 1", location);
 
    return (
       <div className="sticky-top">
@@ -73,24 +71,22 @@ export default function Navbar() {
 }
 
 const NavMenu = ({ onClick = () => {}, location }: { onClick?: () => void; location: Location<any> }) => {
-   console.log("location 2", location);
-
    return (
       <ul className={`p-0 m-0 d-flex flex-column flex-lg-row align-items-lg-center gap-4 list-unstyled`}>
          {Menu.map((item, idx) =>
             item.href && Array.isArray(item.href) ? (
                <li key={idx}>
-                  <NavDropdown linkName={item.label} items={item.href} location={location} />
+                  <NavDropdown linkName={item.label} items={item.href} location={location} onClick={onClick} />
                </li>
             ) : (
                <li key={idx}>
-                  <a
-                     href={item.href}
+                  <Link
+                     to={item.href}
                      className={`text-decoration-none fw-semibold d-block w-100 ${location.pathname === item.href ? "text-secondary" : "text-primary"}`}
                      onClick={onClick}
                   >
                      {item.label}
-                  </a>
+                  </Link>
                </li>
             ),
          )}
@@ -98,14 +94,22 @@ const NavMenu = ({ onClick = () => {}, location }: { onClick?: () => void; locat
    );
 };
 
-const NavDropdown = ({ linkName, items, location }: { linkName: string; items: Array<{ label: string; href: string }>; location: Location<any> }) => {
+const NavDropdown = ({
+   linkName,
+   items,
+   location,
+   onClick = () => {},
+}: {
+   linkName: string;
+   items: Array<{ label: string; href: string }>;
+   location: Location<any>;
+   onClick: () => void;
+}) => {
    const [dropdownOpen, setDropdownOpen] = useState(false);
    const toggle = () => setDropdownOpen((prevState) => !prevState);
 
-   console.log("location 3", location);
-
    const isActive = () => {
-      return items.some((x) => x.href === location.pathname);
+      return items.some((x) => x.href === location.pathname || `${x.href}/` === location.pathname);
    };
 
    return (
@@ -118,12 +122,13 @@ const NavDropdown = ({ linkName, items, location }: { linkName: string; items: A
             <DropdownItem header>{linkName}</DropdownItem>
             {items.map((item, idx) => (
                <DropdownItem key={idx} className="btn btn-secondary">
-                  <a
-                     href={item.href}
+                  <Link
+                     to={item.href}
                      className={`text-decoration-none fw-semibold d-block w-100 ${location.pathname === item.href ? "text-secondary" : "text-primary"}`}
+                     onClick={onClick}
                   >
                      {item.label}
-                  </a>
+                  </Link>
                </DropdownItem>
             ))}
          </DropdownMenu>
