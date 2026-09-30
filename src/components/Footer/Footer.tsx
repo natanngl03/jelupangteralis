@@ -23,7 +23,7 @@ const contacts = [
 
 export default function Footer() {
    return (
-      <footer className="bg-dark pt-5">
+      <footer className="bg-dark pt-5 wow fadeIn" data-wow-delay="0.1s">
          <div className="container text-white">
             <div className="row g-4 text-center text-lg-start">
                <div className="col-12 col-lg-6">
@@ -59,7 +59,7 @@ export default function Footer() {
    );
 }
 
-const Contact = ({ icon, label, href }: { icon: React.ReactNode; label: string; href: string }) => {
+const Contact = ({ icon, label }: { icon: React.ReactNode; label: string }) => {
    return (
       <div className="d-flex align-items-center text-decoration-none text-white mb-0 gap-2">
          {icon}

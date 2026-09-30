@@ -16,12 +16,14 @@ const data = [
 
 export default function HowToOrder() {
    return (
-      <Section id="work" className="py-5 border-bottom bg-white">
-         <h2 className="mb-4 mb-lg-5 fw-bold text-primary">Bagaimana Cara Pemesanan?</h2>
+      <Section id="work" className="py-5 border-bottom bg-white ">
+         <h2 className="mb-4 mb-lg-5 fw-bold text-primary wow fadeInDown" data-wow-delay="0.1s">
+            Bagaimana Cara Pemesanan?
+         </h2>
 
          <div className="row">
             {data.map((item, idx) => (
-               <div className="col-6 col-lg-4 g-2" key={idx}>
+               <div className="col-6 col-lg-4 g-2 wow fadeIn" key={idx} data-wow-delay={`0.${idx + 1}s`}>
                   <div className="d-flex flex-column flex-lg-row align-items-center gap-2 gap-lg-4 border border-2 rounded border-primary position-relative card-work">
                      <p className="position-absolute top-0 start-0 p-3 bg-primary text-white fw-bold">{idx + 1}</p>
                      <div className="text-center text-lg-end ms-lg-auto me-lg-3 my-auto">

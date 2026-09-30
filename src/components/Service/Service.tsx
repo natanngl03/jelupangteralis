@@ -51,14 +51,14 @@ export default function Service({ withoutTitle }: { withoutTitle?: boolean }) {
    return (
       <Section id="service" className="py-6 py-lg-7 border-bottom ">
          {!withoutTitle && (
-            <h2 className="mb-5 text-center text-primary">
+            <h2 className="mb-5 text-center text-primary wow fadeInDown" data-wow-delay="0.1s">
                Temukan Layanan <span className="text-secondary">Kami</span>
             </h2>
          )}
 
          <div className="row g-2 g-lg-4">
             {data.map((item, idx) => (
-               <div className="col-6 col-lg-3" key={idx}>
+               <div className="col-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s" key={idx}>
                   <Card {...item} />
                </div>
             ))}

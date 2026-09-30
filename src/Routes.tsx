@@ -45,6 +45,10 @@ const Routes: RouteObject[] = [
             Component: Testimonial,
          },
          {
+            path: "/notfound",
+            Component: NotFound,
+         },
+         {
             path: "*",
             Component: NotFound,
          },

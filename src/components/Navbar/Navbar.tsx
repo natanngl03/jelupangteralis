@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useLocation, type Location } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { RiMenu5Fill } from "react-icons/ri";
 import { Offcanvas, OffcanvasBody, OffcanvasHeader } from "reactstrap";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
@@ -29,10 +29,21 @@ const Menu: Array<MenuType> = [
 export default function Navbar() {
    const location = useLocation();
    const [isOpen, setIsOpen] = useState<boolean>(false);
+   const [currentLocation, setCurrentLocation] = useState<string>("/");
 
    const logoOnClick = () => {
       window.location.href = "/";
    };
+
+   useEffect(() => {
+      const handleCurrentLocation = () => {
+         const str = location.pathname;
+         const result = str === "/" ? "/" : str.replace(/\/$/, "");
+         setCurrentLocation(result);
+      };
+
+      handleCurrentLocation();
+   }, []);
 
    return (
       <div className="sticky-top">
@@ -41,7 +52,7 @@ export default function Navbar() {
                <img src="/img/logo.png" alt="" className="navbar-brand" onClick={logoOnClick} />
 
                <div className="d-none d-lg-block ms-auto mx-lg-auto">
-                  <NavMenu location={location} />
+                  <NavMenu location={currentLocation} />
                </div>
 
                <a href={waConsult()} target="_blank" rel="noopener noreferrer" className="btn btn-primary d-none d-lg-block px-3 py-2 rounded-pill">
@@ -55,7 +66,7 @@ export default function Navbar() {
                   </OffcanvasHeader>
                   <OffcanvasBody>
                      <div className="h-100 d-flex flex-column">
-                        <NavMenu onClick={() => setIsOpen(false)} location={location} />
+                        <NavMenu onClick={() => setIsOpen(false)} location={currentLocation} />
 
                         <a href={waConsult()} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-auto rounded-pill">
                            <FaWhatsapp size={25} className="me-2" />
@@ -70,7 +81,7 @@ export default function Navbar() {
    );
 }
 
-const NavMenu = ({ onClick = () => {}, location }: { onClick?: () => void; location: Location<any> }) => {
+const NavMenu = ({ onClick = () => {}, location }: { onClick?: () => void; location: string }) => {
    return (
       <ul className={`p-0 m-0 d-flex flex-column flex-lg-row align-items-lg-center gap-4 list-unstyled`}>
          {Menu.map((item, idx) =>
@@ -82,7 +93,7 @@ const NavMenu = ({ onClick = () => {}, location }: { onClick?: () => void; locat
                <li key={idx}>
                   <a
                      href={item.href}
-                     className={`text-decoration-none fw-semibold d-block w-100 ${location.pathname === item.href ? "text-secondary" : "text-primary"}`}
+                     className={`text-decoration-none fw-semibold d-block w-100 ${location === item.href ? "text-secondary" : "text-primary"}`}
                      onClick={onClick}
                   >
                      {item.label}
@@ -102,14 +113,14 @@ const NavDropdown = ({
 }: {
    linkName: string;
    items: Array<{ label: string; href: string }>;
-   location: Location<any>;
+   location: string;
    onClick: () => void;
 }) => {
    const [dropdownOpen, setDropdownOpen] = useState(false);
    const toggle = () => setDropdownOpen((prevState) => !prevState);
 
    const isActive = () => {
-      return items.some((x) => x.href === location.pathname || `${x.href}/` === location.pathname);
+      return items.some((x) => x.href === location);
    };
 
    return (
@@ -124,7 +135,7 @@ const NavDropdown = ({
                <DropdownItem key={idx} className="btn btn-secondary">
                   <a
                      href={item.href}
-                     className={`text-decoration-none fw-semibold d-block w-100 ${location.pathname === item.href ? "text-secondary" : "text-primary"}`}
+                     className={`text-decoration-none fw-semibold d-block w-100 ${item.href == location ? "text-secondary" : "text-primary"}`}
                      onClick={onClick}
                   >
                      {item.label}

@@ -6,13 +6,13 @@ export default function About({ withoutTitle }: { withoutTitle?: boolean }) {
    return (
       <Section id="about" className="bg-white py-7 border-bottom border-top">
          {!withoutTitle && (
-            <h2 className="mb-5 text-center text-primary">
+            <h2 className="mb-5 text-center text-primary wow fadeInDown" data-wow-delay="0.1s">
                Tentang <span className="text-secondary">Kami</span>
             </h2>
          )}
 
          <div className="row g-4 g-lg-5">
-            <div className="col-12 col-lg-7 order-2 order-lg-1 pt-4 pt-lg-0">
+            <div className="col-12 col-lg-7 order-2 order-lg-1 pt-4 pt-lg-0 wow fadeIn" data-wow-delay="0.2s">
                <h3 className="mb-lg-4 text-primary">Jelupang Jaya Teralis</h3>
 
                <p>
@@ -43,7 +43,7 @@ export default function About({ withoutTitle }: { withoutTitle?: boolean }) {
                   )}
                </div>
             </div>
-            <div className="col-12 col-lg-5 order-1 order-lg-2">
+            <div className="col-12 col-lg-5 order-1 order-lg-2 wow fadeIn" data-wow-delay="0.3s">
                <img
                   src={AboutPNG}
                   alt="about image"

@@ -16,7 +16,7 @@ export default function Hero() {
    }, []);
 
    return (
-      <section className="hero-wrapper">
+      <section className="hero-wrapper wow fadeIn" data-wow-delay="0.1s">
          <div className="header-carousel owl-carousel">
             {[...Array(4)].map((_, idx) => (
                <div className="header-carousel-item" key={idx}>

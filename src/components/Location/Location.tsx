@@ -2,7 +2,7 @@ import Section from "../ui/Section";
 
 export default function Location() {
    return (
-      <Section id="location" className="py-7">
+      <Section id="location" className="py-7 wow fadeInUp" data-wow-delay="0.1s">
          <h2 className="mb-5 text-center text-primary">
             Lokasi <span className="text-secondary">Kami</span>
          </h2>

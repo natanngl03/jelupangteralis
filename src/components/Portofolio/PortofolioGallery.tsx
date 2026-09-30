@@ -9,7 +9,7 @@ export default function PortofolioGallery() {
          <Section id="portofolio" className="bg-white py-5 py-lg-7 border-bottom">
             <div className="row g-2">
                {[...Array(42)].map((_, idx) => (
-                  <div className="col-6 col-lg-3" key={idx}>
+                  <div className="col-6 col-lg-3 wow fadeIn" data-wow-delay={`{0.${idx + 1}s}`} key={idx}>
                      <div className="card">
                         <a href={`/img/portofolio/img${idx + 1}.jpg`} className="glightbox" data-gallery="portofolio-gallery">
                            <img
