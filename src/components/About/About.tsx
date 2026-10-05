@@ -6,28 +6,23 @@ export default function About({ withoutTitle }: { withoutTitle?: boolean }) {
    return (
       <Section id="about" className="bg-white py-7 border-bottom border-top">
          {!withoutTitle && (
-            <h2 className="mb-5 text-center text-primary wow fadeInDown" data-wow-delay="0.1s">
-               Tentang <span className="text-secondary">Kami</span>
-            </h2>
+            <h1 className="mb-5 text-center text-primary wow fadeInDown" data-wow-delay="0.1s">
+               Jasa Kanopi Bergaransi <br /> di <span className="text-secondary">Tangerang Selatan</span>
+            </h1>
          )}
 
          <div className="row g-4 g-lg-5">
             <div className="col-12 col-lg-7 order-2 order-lg-1 pt-4 pt-lg-0 wow fadeIn" data-wow-delay="0.2s">
-               <h3 className="mb-lg-4 text-primary">Jelupang Jaya Teralis</h3>
+               <h2 className="mb-lg-4 text-primary">Tentang Kami</h2>
 
                <p>
-                  Kami melayani berbagai kebutuhan pembuatan dan pengerjaan produk mulai dari teralis, pagar, gerbang, kanopi, jendela, railing,
-                  hingga berbagai pekerjaan custom sesuai kebutuhan.
+                  Jelupang Jaya Teralis adalah ahli kanopi di Tangerang Selatan yang melayani pembuatan kanopi berkualitas dengan pengerjaan
+                  profesional dan bergaransi. Kami mengutamakan kekuatan, kerapian, dan desain yang sesuai dengan kebutuhan setiap pelanggan.
                </p>
 
                <p>
-                  Dengan pengalaman dalam mengerjakan berbagai jenis proyek, kami telah melayani perusahaan, developer perumahan, kontraktor, hingga
-                  pemilik rumah pribadi. Setiap pekerjaan dikerjakan dengan memperhatikan ukuran, desain, fungsi, serta kebutuhan di lapangan.
-               </p>
-
-               <p>
-                  Kami berkomitmen memberikan hasil yang rapi, kuat, dan sesuai dengan kebutuhan pelanggan, baik untuk kebutuhan rumah tinggal, proyek
-                  perumahan, maupun kebutuhan bangunan lainnya.
+                  Selain kanopi, kami juga mengerjakan berbagai produk las besi custom seperti teralis, railing tangga dan balkon, tangga putar,
+                  gerbang, pagar, kusen, serta berbagai kebutuhan besi lainnya.
                </p>
 
                <div className="row">

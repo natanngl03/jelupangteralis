@@ -45,8 +45,9 @@ export default function Testimonial() {
          <div className="container-fluid testimonial pb-5">
             <div className="container pb-5">
                <div className="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style={{ maxWidth: "800px" }}>
-                  <h4 className="text-primary">Testimoni Pelanggan</h4>
-                  <h1 className="display-5 mb-4">Apa Kata Pelanggan Kami?</h1>
+                  <h2 className="text-primary">Testimoni Pelanggan</h2>
+                  <h3 className="display-5 mb-4">Apa Kata Pelanggan Kami?</h3>
+
                   <p className="mb-0">
                      Kepercayaan dan kepuasan pelanggan adalah prioritas kami. Simak pengalaman mereka setelah menggunakan jasa Jelupang Jaya Teralis.
                   </p>

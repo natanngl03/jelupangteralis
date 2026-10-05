@@ -32,8 +32,8 @@ export default function App() {
                <WowInit />
             </main>
             <Footer />
+            <WaButton />
          </Suspense>
-         <WaButton />
       </>
    );
 }

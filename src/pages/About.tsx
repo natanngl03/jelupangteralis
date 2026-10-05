@@ -10,7 +10,7 @@ export default function About() {
          <Head>
             <title>Tentang Kami | Jelupang Jaya Teralis</title>
          </Head>
-         <Header title="Tentang Kami" />
+         <Header title="Jasa Kanopi Bergaransi <br /> di Tangerang Selatan" />
          <AboutSection withoutTitle />
          <ExperienceDivider />
          <Location />
