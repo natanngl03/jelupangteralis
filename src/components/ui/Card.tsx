@@ -1,5 +1,7 @@
+import { useEffect, useRef, useState } from "react";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { waOrder } from "../../lib/helper";
+import Spinner from "../../components/ui/Spinner";
 
 type Props = {
    title: string;
@@ -8,9 +10,31 @@ type Props = {
 };
 
 export default function Card({ title, description, imgSrc }: Props) {
+   const [isLoading, setIsLoading] = useState<boolean>(true);
+   const imgRef = useRef<HTMLImageElement>(null);
+
+   useEffect(() => {
+      const img = imgRef.current;
+
+      if (!img) return;
+
+      if (img.complete) {
+         setIsLoading(false);
+      }
+   }, []);
+
    return (
       <div className="card">
-         <img src={imgSrc} className="card-img-top" alt="..." style={{ height: "200px", backgroundSize: "cover" }} loading="lazy" />
+         <img
+            ref={imgRef}
+            src={imgSrc}
+            className="card-img-top"
+            alt="..."
+            style={{ height: "200px", backgroundSize: "cover" }}
+            loading="lazy"
+            onLoad={() => setIsLoading(false)}
+            onError={() => setIsLoading(false)}
+         />
 
          <div className="card-body d-flex flex-column gap-2">
             <div className="d-flex flex-column gap-2">
@@ -31,6 +55,8 @@ export default function Card({ title, description, imgSrc }: Props) {
                <IoLogoWhatsapp className="fs-4" />
             </a>
          </div>
+
+         {isLoading && <Spinner />}
       </div>
    );
 }

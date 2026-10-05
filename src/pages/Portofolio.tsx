@@ -8,7 +8,7 @@ export default function Portofolio() {
          <Head>
             <title>Portofolio | Jelupang Jaya Teralis</title>
          </Head>
-         <Header title="Potofolio Kami" />
+         <Header title="Portofolio Kami" />
          <PortofolioGallery />
       </>
    );

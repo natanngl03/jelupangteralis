@@ -8,7 +8,7 @@ export default function Spinner() {
             transform: "translate(-50%,-50%)",
          }}
       >
-         <div className="spinner-border text-primary fs-2" role="status">
+         <div className="spinner-border text-secondary fs-2" role="status">
             <span className="visually-hidden">Loading...</span>
          </div>
       </div>
