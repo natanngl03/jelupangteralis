@@ -62,11 +62,11 @@ const Routes: RouteObject[] = [
          },
          {
             path: "notfound",
-            Component: NotFound,
+            element: <NotFound backPath="/" />,
          },
          {
             path: "*",
-            Component: NotFound,
+            element: <NotFound backPath="/" />,
          },
       ],
    },
