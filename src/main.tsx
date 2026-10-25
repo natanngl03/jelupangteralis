@@ -1,5 +1,5 @@
 import { ViteReactSSG } from "vite-react-ssg";
-import { Routes } from "./Routes";
+import { Routes } from "./routes/Routes";
 
 const router = [...Routes];
 
