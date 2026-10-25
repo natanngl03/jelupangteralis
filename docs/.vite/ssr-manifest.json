@@ -63,7 +63,6 @@
   "node_modules/@popperjs/core/lib/utils/userAgent.js": [],
   "node_modules/@popperjs/core/lib/utils/within.js": [],
   "node_modules/@remix-run/router/dist/router.js": [],
-  "node_modules/aos/dist/aos.css": [],
   "node_modules/classnames/index.js": [],
   "node_modules/desandro-matches-selector/matches-selector.js": [
     "/assets/masonry-kGsi3vkf.js"
@@ -78,17 +77,17 @@
     "/assets/masonry-kGsi3vkf.js"
   ],
   "node_modules/glightbox/dist/css/glightbox.min.css": [
-    "/assets/GLightboxInit-C0VMJd6B.js",
+    "/assets/GLightboxInit-C3wDkkYq.js",
     "/assets/GLightboxInit-C45C7UYd.css"
   ],
   "node_modules/glightbox/dist/js/glightbox.min.js": [
     "/assets/glightbox.min-BirPf3v_.js"
   ],
   "node_modules/imagesloaded/imagesloaded.js": [
-    "/assets/HowToOrder-DmQfgNfC.js"
+    "/assets/HowToOrder-D6DgvtsP.js"
   ],
   "node_modules/imagesloaded/node_modules/ev-emitter/ev-emitter.js": [
-    "/assets/HowToOrder-DmQfgNfC.js"
+    "/assets/HowToOrder-D6DgvtsP.js"
   ],
   "node_modules/invariant/browser.js": [
     "/assets/compiler-runtime-dsb7vIue.js"
@@ -132,21 +131,21 @@
   "node_modules/react-icons/lib/iconBase.mjs": [],
   "node_modules/react-icons/lib/iconContext.mjs": [],
   "node_modules/react-icons/lu/index.mjs": [
-    "/assets/HowToOrder-DmQfgNfC.js"
+    "/assets/HowToOrder-D6DgvtsP.js"
   ],
   "node_modules/react-icons/md/index.mjs": [
-    "/assets/HowToOrder-DmQfgNfC.js"
+    "/assets/HowToOrder-D6DgvtsP.js"
   ],
   "node_modules/react-icons/ri/index.mjs": [],
   "node_modules/react-icons/ti/index.mjs": [
-    "/assets/404-t5clAui6.js"
+    "/assets/404-C1j7IHK-.js"
   ],
   "node_modules/react-image-gallery/build/image-gallery.es.js": [
-    "/assets/PageDetail-DVI75lEb.js",
+    "/assets/PageDetail-RkIC1QP7.js",
     "/assets/PageDetail-BjTr9qCI.css"
   ],
   "node_modules/react-image-gallery/styles/image-gallery.css": [
-    "/assets/PageDetail-DVI75lEb.js",
+    "/assets/PageDetail-RkIC1QP7.js",
     "/assets/PageDetail-BjTr9qCI.css"
   ],
   "node_modules/react-router-dom/dist/index.js": [],
@@ -174,24 +173,24 @@
     "/assets/compiler-runtime-dsb7vIue.js"
   ],
   "node_modules/reactstrap/esm/Accordion.js": [
-    "/assets/Faq-DtTdIzng.js"
+    "/assets/Faq-DcmDFcVV.js"
   ],
   "node_modules/reactstrap/esm/AccordionBody.js": [
-    "/assets/Faq-DtTdIzng.js"
+    "/assets/Faq-DcmDFcVV.js"
   ],
   "node_modules/reactstrap/esm/AccordionContext.js": [
-    "/assets/Faq-DtTdIzng.js"
+    "/assets/Faq-DcmDFcVV.js"
   ],
   "node_modules/reactstrap/esm/AccordionHeader.js": [
-    "/assets/Faq-DtTdIzng.js"
+    "/assets/Faq-DcmDFcVV.js"
   ],
   "node_modules/reactstrap/esm/AccordionItem.js": [
-    "/assets/Faq-DtTdIzng.js"
+    "/assets/Faq-DcmDFcVV.js"
   ],
   "node_modules/reactstrap/esm/Button.js": [],
   "node_modules/reactstrap/esm/CloseButton.js": [],
   "node_modules/reactstrap/esm/Collapse.js": [
-    "/assets/Faq-DtTdIzng.js"
+    "/assets/Faq-DcmDFcVV.js"
   ],
   "node_modules/reactstrap/esm/Dropdown.js": [],
   "node_modules/reactstrap/esm/DropdownContext.js": [],
@@ -201,16 +200,16 @@
   "node_modules/reactstrap/esm/Fade.js": [],
   "node_modules/reactstrap/esm/InputGroupContext.js": [],
   "node_modules/reactstrap/esm/Modal.js": [
-    "/assets/videos-DCulDHPr.js"
+    "/assets/videos-BSnE8nyW.js"
   ],
   "node_modules/reactstrap/esm/ModalBody.js": [
-    "/assets/videos-DCulDHPr.js"
+    "/assets/videos-BSnE8nyW.js"
   ],
   "node_modules/reactstrap/esm/ModalFooter.js": [
-    "/assets/videos-DCulDHPr.js"
+    "/assets/videos-BSnE8nyW.js"
   ],
   "node_modules/reactstrap/esm/ModalHeader.js": [
-    "/assets/videos-DCulDHPr.js"
+    "/assets/videos-BSnE8nyW.js"
   ],
   "node_modules/reactstrap/esm/Offcanvas.js": [],
   "node_modules/reactstrap/esm/OffcanvasBody.js": [],
@@ -235,7 +234,7 @@
   "node_modules/vite-react-ssg/dist/shared/vite-react-ssg.BhGKpaqQ.mjs": [],
   "node_modules/vite-react-ssg/dist/shared/vite-react-ssg.C1RTs5UA.mjs": [],
   "node_modules/vite-react-ssg/dist/shared/vite-react-ssg.CoMLbIiW.mjs": [
-    "/assets/Section-BVWyIdun.js"
+    "/assets/Section-Bo1z70rb.js"
   ],
   "node_modules/vite-react-ssg/node_modules/react-helmet-async/lib/index.module.js": [
     "/assets/compiler-runtime-dsb7vIue.js"
@@ -245,131 +244,131 @@
   "src/assets/css/style.css": [],
   "src/assets/scss/bootsrap.min.css": [],
   "src/components/elements/About.tsx": [
-    "/assets/Location-CVE4ZvXM.js"
+    "/assets/Location-DFk_vRP8.js"
   ],
   "src/components/elements/AboutDivider.tsx": [
-    "/assets/Home-bEXHUagB.js"
+    "/assets/Home-DPR7zVf5.js"
   ],
   "src/components/elements/ExperienceDivider.tsx": [
-    "/assets/ExperienceDivider-ChFI4nsU.js"
+    "/assets/ExperienceDivider-B8hrqL8X.js"
   ],
   "src/components/elements/Faq.tsx": [
-    "/assets/Faq-DtTdIzng.js"
+    "/assets/Faq-DcmDFcVV.js"
   ],
   "src/components/elements/Footer.tsx": [],
   "src/components/elements/Hero.tsx": [
-    "/assets/Home-bEXHUagB.js"
+    "/assets/Home-DPR7zVf5.js"
   ],
   "src/components/elements/HowToOrder.tsx": [
-    "/assets/HowToOrder-DmQfgNfC.js"
+    "/assets/HowToOrder-D6DgvtsP.js"
   ],
   "src/components/elements/KanopiSection.tsx": [
-    "/assets/Home-bEXHUagB.js"
+    "/assets/Home-DPR7zVf5.js"
   ],
   "src/components/elements/Location.tsx": [
-    "/assets/Location-CVE4ZvXM.js"
+    "/assets/Location-DFk_vRP8.js"
   ],
   "src/components/elements/Navbar.tsx": [],
   "src/components/elements/PageDetail.tsx": [
-    "/assets/PageDetail-DVI75lEb.js",
+    "/assets/PageDetail-RkIC1QP7.js",
     "/assets/PageDetail-BjTr9qCI.css"
   ],
   "src/components/elements/PortofolioGallery.tsx": [
-    "/assets/Portofolio-BroGVrox.js"
+    "/assets/Portofolio-zW8inZxR.js"
   ],
   "src/components/elements/PortofolioSection.tsx": [
-    "/assets/Home-bEXHUagB.js"
+    "/assets/Home-DPR7zVf5.js"
   ],
   "src/components/elements/Service.tsx": [
-    "/assets/Service-CuBeAIRL.js"
+    "/assets/Service-BF0sotW8.js"
   ],
   "src/components/elements/Testimonial.tsx": [
-    "/assets/Testimonial-Cn06HdzB.js"
+    "/assets/Testimonial-BjK03tR7.js"
   ],
   "src/components/elements/VideoGallery.tsx": [
-    "/assets/Videos-1ZhzKypR.js"
+    "/assets/Videos-dy4M4qL-.js"
   ],
   "src/components/elements/VideoSection.tsx": [
-    "/assets/Home-bEXHUagB.js"
+    "/assets/Home-DPR7zVf5.js"
   ],
   "src/components/ui/Card.tsx": [
-    "/assets/Service-CuBeAIRL.js"
+    "/assets/Service-BF0sotW8.js"
   ],
   "src/components/ui/Counter.tsx": [
-    "/assets/ExperienceDivider-ChFI4nsU.js"
+    "/assets/ExperienceDivider-B8hrqL8X.js"
   ],
   "src/components/ui/Fallback.tsx": [],
   "src/components/ui/GLightboxInit.tsx": [
-    "/assets/GLightboxInit-C0VMJd6B.js",
+    "/assets/GLightboxInit-C3wDkkYq.js",
     "/assets/GLightboxInit-C45C7UYd.css"
   ],
   "src/components/ui/Header.tsx": [
-    "/assets/Section-BVWyIdun.js"
+    "/assets/Section-Bo1z70rb.js"
   ],
   "src/components/ui/ImageComp.tsx": [
-    "/assets/PageDetail-DVI75lEb.js",
+    "/assets/PageDetail-RkIC1QP7.js",
     "/assets/PageDetail-BjTr9qCI.css"
   ],
   "src/components/ui/ImageGallery.tsx": [
-    "/assets/PageDetail-DVI75lEb.js",
+    "/assets/PageDetail-RkIC1QP7.js",
     "/assets/PageDetail-BjTr9qCI.css"
   ],
   "src/components/ui/MasonryGrid.tsx": [
-    "/assets/HowToOrder-DmQfgNfC.js"
+    "/assets/HowToOrder-D6DgvtsP.js"
   ],
   "src/components/ui/Section.tsx": [
-    "/assets/Section-BVWyIdun.js"
+    "/assets/Section-Bo1z70rb.js"
   ],
   "src/components/ui/Spinner.tsx": [
     "/assets/Spinner-DF7yzhGH.js"
   ],
   "src/components/ui/VideoModal.tsx": [
-    "/assets/videos-DCulDHPr.js"
+    "/assets/videos-BSnE8nyW.js"
   ],
   "src/components/ui/WaButton/WaButton.tsx": [],
   "src/components/ui/WaButton/style.css": [],
   "src/json/faq.json": [
-    "/assets/Faq-DtTdIzng.js"
+    "/assets/Faq-DcmDFcVV.js"
   ],
   "src/json/kanopi.json": [],
   "src/json/lainnya.json": [],
   "src/json/videos.json": [
-    "/assets/videos-DCulDHPr.js"
+    "/assets/videos-BSnE8nyW.js"
   ],
   "src/lib/helper.ts": [],
   "src/main.tsx": [],
   "src/pages/404.tsx": [
-    "/assets/404-t5clAui6.js"
+    "/assets/404-C1j7IHK-.js"
   ],
   "src/pages/About.tsx": [
-    "/assets/About-5IrBctCV.js"
+    "/assets/About-3k4Ro4iO.js"
   ],
   "src/pages/Faq.tsx": [
-    "/assets/Faq-CKisSWyq.js"
+    "/assets/Faq-CO83hUBB.js"
   ],
   "src/pages/Home.tsx": [
-    "/assets/Home-bEXHUagB.js"
+    "/assets/Home-DPR7zVf5.js"
   ],
   "src/pages/Kanopi/Kanopi.tsx": [
-    "/assets/Kanopi-0VT45Pwh.js"
+    "/assets/Kanopi-BzoMWfT7.js"
   ],
   "src/pages/Kanopi/KanopiDetail.tsx": [
-    "/assets/KanopiDetail-BXqZ63zi.js"
+    "/assets/KanopiDetail-BLUsAbnm.js"
   ],
   "src/pages/Lainnya/Lainnya.tsx": [
-    "/assets/Lainnya-DhTLRc5j.js"
+    "/assets/Lainnya-zz0EEqiQ.js"
   ],
   "src/pages/Lainnya/LainnyaDetail.tsx": [
-    "/assets/LainnyaDetail-BYQ8jdWv.js"
+    "/assets/LainnyaDetail-EcE--yRi.js"
   ],
   "src/pages/Portofolio.tsx": [
-    "/assets/Portofolio-BroGVrox.js"
+    "/assets/Portofolio-zW8inZxR.js"
   ],
   "src/pages/Testimonial.tsx": [
-    "/assets/Testimonial-Ix9vpfeB.js"
+    "/assets/Testimonial-CAV4K9su.js"
   ],
   "src/pages/Videos.tsx": [
-    "/assets/Videos-1ZhzKypR.js"
+    "/assets/Videos-dy4M4qL-.js"
   ],
   "src/routes/Routes.tsx": []
 }

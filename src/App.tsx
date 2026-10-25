@@ -1,7 +1,6 @@
 // import "./assets/css/animate.min.css";
 import "./assets/scss/bootsrap.min.css";
 import "./assets/css/style.css";
-import "aos/dist/aos.css";
 import { Suspense, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/elements/Navbar";

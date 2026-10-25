@@ -42,7 +42,7 @@ export default function About({ isH1 }: { isH1?: boolean }) {
                   )}
                </div>
             </div>
-            <div className="col-12 col-lg-5 order-1 order-lg-2" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="600">
+            <div className="col-12 col-lg-5 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
                <img
                   src="/img/product/kordoba_plavon1.webp"
                   alt="about image"
