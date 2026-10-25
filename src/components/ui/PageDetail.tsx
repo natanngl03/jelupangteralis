@@ -1,4 +1,7 @@
 import React, { Fragment } from "react";
+import ExperienceDivider from "../elements/ExperienceDivider";
+import HowToOrder from "../elements/HowToOrder";
+import Testimonial from "../elements/Testimonial";
 
 export default function PageDetail({ title, children }: { title: string; children: React.ReactNode }) {
    return (

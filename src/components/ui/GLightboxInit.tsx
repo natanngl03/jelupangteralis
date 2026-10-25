@@ -10,6 +10,7 @@ export default function GLightboxInit() {
 
          lightbox = GLightbox({
             selector: ".glightbox",
+            loop: true,
          });
       };
 

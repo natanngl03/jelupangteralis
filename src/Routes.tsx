@@ -7,8 +7,12 @@ const About = lazy(() => import("./pages/About"));
 const Faq = lazy(() => import("./pages/Faq"));
 const Portofolio = lazy(() => import("./pages/Portofolio"));
 const Videos = lazy(() => import("./pages/Videos"));
-const Service = lazy(() => import("./pages/Service"));
+const Kanopi = lazy(() => import("./pages/Kanopi/Kanopi"));
+const KanopiDetail = lazy(() => import("./pages/Kanopi/KanopiDetail"));
+const Lainnya = lazy(() => import("./pages/Lainnya/Lainnya"));
+const LainnyaDetail = lazy(() => import("./pages/Lainnya/LainnyaDetail"));
 const Testimonial = lazy(() => import("./pages/Testimonial"));
+
 const NotFound = lazy(() => import("./pages/404"));
 
 const Routes: RouteObject[] = [
@@ -21,31 +25,43 @@ const Routes: RouteObject[] = [
             Component: Home,
          },
          {
-            path: "/about",
+            path: "about",
             Component: About,
          },
          {
-            path: "/faq",
+            path: "faq",
             Component: Faq,
          },
          {
-            path: "/portofolio",
+            path: "portofolio",
             Component: Portofolio,
          },
          {
-            path: "/videos",
+            path: "videos",
             Component: Videos,
          },
          {
-            path: "/service",
-            Component: Service,
+            path: "kanopi",
+            Component: Kanopi,
          },
          {
-            path: "/testimonial",
+            path: "kanopi/:slug",
+            Component: KanopiDetail,
+         },
+         {
+            path: "lainnya",
+            Component: Lainnya,
+         },
+         {
+            path: "lainnya/:slug",
+            Component: LainnyaDetail,
+         },
+         {
+            path: "testimonial",
             Component: Testimonial,
          },
          {
-            path: "/notfound",
+            path: "notfound",
             Component: NotFound,
          },
          {

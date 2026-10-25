@@ -1,4 +1,4 @@
-const waPhone = `https://wa.me/6282253442031?text=Hallo%20Jelupang%20Jaya%20Teralis,`;
+const waPhone = `https://wa.me/6282253442031?text=Hallo%20Jelupang%20Jaya%Kanopi,`;
 
 export const waConsult = () => {
    const consultMsg = `%20Saya%20Ingin%20Konsultasi`;
