@@ -116,11 +116,10 @@ const NavMenu = ({ onClick = () => {}, location }: { onClick?: () => void; locat
                   <NavDropdown linkName={item.label} items={item.href} location={location} onClick={onClick} />
                </li>
             ) : (
-               <li key={idx}>
+               <li key={idx} onClick={onClick}>
                   <a
                      href={item.href}
                      className={`text-decoration-none fw-semibold d-block w-100 ${location === item.href ? "text-secondary" : "text-primary"}`}
-                     onClick={onClick}
                   >
                      {item.label}
                   </a>
@@ -158,11 +157,10 @@ const NavDropdown = ({
          <DropdownMenu>
             <DropdownItem header>{linkName}</DropdownItem>
             {items.map((item, idx) => (
-               <DropdownItem key={idx} className="btn btn-secondary">
+               <DropdownItem key={idx} className="btn btn-secondary" onClick={onClick}>
                   <a
                      href={item.href}
                      className={`text-decoration-none fw-semibold d-block w-100 ${item.href == location ? "text-secondary" : "text-primary"}`}
-                     onClick={onClick}
                   >
                      {item.label}
                   </a>

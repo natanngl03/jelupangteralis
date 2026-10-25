@@ -9,7 +9,7 @@ import Footer from "./components/elements/Footer";
 import Fallback from "./components/ui/Fallback";
 import WaButton from "./components/ui/WaButton/WaButton";
 // import WowInit from "./components/ui/WowInit";
-import AOSInit from "./components/ui/AosInit";
+// import AOSInit from "./components/ui/AosInit";
 
 export default function App() {
    const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -26,7 +26,7 @@ export default function App() {
 
    return (
       <>
-         <AOSInit />
+         {/* <AOSInit /> */}
 
          {isLoading && <Fallback />}
          <Suspense fallback={<Fallback />}>

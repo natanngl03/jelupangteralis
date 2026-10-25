@@ -49,6 +49,7 @@
          rel="stylesheet"
       />
 
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       <link rel="stylesheet" href="/lib/owl.carousel.min.css" />
    </head>
    <body>
@@ -57,6 +58,15 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
       <script src="/lib/owl.carousel.min.js"></script>
 
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+         AOS.init({
+            once: true,
+            delay: 0,
+            offset: 0,
+            duration: 800,
+         });
+      </script>
       <script type="module" src="/src/main.tsx"></script>
    </body>
 </html>

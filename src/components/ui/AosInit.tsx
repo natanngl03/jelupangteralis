@@ -12,9 +12,9 @@ export default function AOSInit() {
 
       AOS.init({
          once: true,
-         delay: 100,
+         delay: 0,
          offset: 0,
-         duration: 1000,
+         duration: 800,
       });
    }, []);
 
