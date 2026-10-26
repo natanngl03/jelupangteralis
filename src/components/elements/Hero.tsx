@@ -1,19 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-import Spinner from "../ui/Spinner";
+import { useEffect } from "react";
 
 export default function Hero() {
-   const [isLoading, setIsLoading] = useState<boolean>(true);
-   const imgRef = useRef<HTMLImageElement>(null);
-
    useEffect(() => {
-      const img = imgRef.current;
-
-      if (!img) return;
-
-      if (img.complete) {
-         setIsLoading(false);
-      }
-
       const script = document.createElement("script");
 
       script.src = "/js/carousel.js";
@@ -32,7 +20,6 @@ export default function Hero() {
             {[...Array(3)].map((_, idx) => (
                <div className="header-carousel-item" key={idx}>
                   <img
-                     ref={imgRef}
                      src={`/img/carousel/hero${idx + 1}.webp`}
                      className="hero-image"
                      alt="Jelupang Jaya Kanopi"
@@ -41,13 +28,9 @@ export default function Hero() {
                      loading={idx === 0 ? "eager" : "lazy"}
                      fetchPriority={idx === 0 ? "high" : "auto"}
                      decoding="async"
-                     onLoad={() => setIsLoading(false)}
-                     onError={() => setIsLoading(false)}
                   />
                </div>
             ))}
-
-            {isLoading && <Spinner />}
          </div>
       </section>
    );
