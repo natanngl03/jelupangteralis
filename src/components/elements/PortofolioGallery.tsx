@@ -11,8 +11,8 @@ export default function PortofolioGallery() {
       const kanopiKaca = [...Array(3)].map((_, idx) => `kanopi_kaca${idx + 1}.webp`);
       const kanopiOtomatis = [...Array(2)].map((_, idx) => `kanopi_otomatis${idx + 1}.webp`);
       const kanopiStandard = [...Array(5)].map((_, idx) => `kanopi_standard${idx + 1}.webp`);
-      const kordobaPlavon = [...Array(5)].map((_, idx) => `kordoba_plavon${idx + 1}.webp`);
-      const kordoba = [...Array(3)].map((_, idx) => `kordoba${idx + 1}.webp`);
+      const kordobaPlavon = [...Array(15)].map((_, idx) => `kordoba_plavon${idx + 1}.webp`);
+      const kordoba = [...Array(11)].map((_, idx) => `kordoba${idx + 1}.webp`);
       const gerbang = [...Array(15)].map((_, idx) => `gerbang${idx + 1}_Watermarked.webp`);
       const bajaRingan = [...Array(3)].map((_, idx) => `baja_ringan${idx + 1}.webp`);
       const pintuBesi = [...Array(14)].map((_, idx) => `pintu_besi${idx + 1}_Watermarked.webp`);

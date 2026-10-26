@@ -20,7 +20,7 @@
          { "original": "/img/product/kordoba1.webp", "thumbnail": "/img/product/kordoba1.webp" },
          { "original": "/img/product/kordoba2.webp", "thumbnail": "/img/product/kordoba2.webp" }
       ],
-      "totalImg": 3,
+      "totalImg": 11,
       "imageName": "kordoba#number#.webp",
       "videos": []
    },
@@ -46,7 +46,7 @@
          { "original": "/img/product/kordoba_plavon2.webp", "thumbnail": "/img/product/kordoba_plavon2.webp" },
          { "original": "/img/product/kordoba_plavon3.webp", "thumbnail": "/img/product/kordoba_plavon3.webp" }
       ],
-      "totalImg": 5,
+      "totalImg": 15,
       "imageName": "kordoba_plavon#number#.webp",
       "videos": []
    },
