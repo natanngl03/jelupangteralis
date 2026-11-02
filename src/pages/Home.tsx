@@ -25,12 +25,14 @@ export default function Home() {
          <About isH1 />
          <ExperienceDivider />
          <KanopiSection />
+         <HowToOrder bgColor="bg-light" />
+
+         <VideoSection />
+         <AboutDivider />
+
+         <PortofolioSection />
 
          <Service withTitle />
-         <HowToOrder />
-         <AboutDivider />
-         <VideoSection />
-         <PortofolioSection />
          <Faq />
          <Testimonial />
          <Location />

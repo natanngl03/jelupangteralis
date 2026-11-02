@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
 import { FaHeart } from "react-icons/fa";
 
@@ -23,39 +24,47 @@ const contacts = [
 
 export default function Footer() {
    return (
-      <footer className="bg-dark pt-5 wow fadeIn" data-wow-delay="0.1s">
+      <footer className="bg-dark pt-5">
          <div className="container text-white">
             <div className="row g-4 text-center text-lg-start">
-               <div className="col-12 col-lg-6">
-                  <h2 className="display-6 fs-3 fw-bold" data-aos="fade-in" data-aos-delay="100">
-                     Jelupang Jaya Kanopi
-                  </h2>
-                  <p className="mb-0" data-aos="fade-in" data-aos-delay="200">
+               <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  className="col-12 col-lg-6"
+               >
+                  <h2 className="display-6 fs-3 fw-bold">Jelupang Jaya Kanopi</h2>
+                  <p className="mb-0">
                      Melayani pembuatan dan pemasangan teralis, kanopi, pagar, pintu besi, gerbang, railing, serta berbagai kebutuhan las besi untuk
                      rumah dan bangunan anda.
                   </p>
-               </div>
-               <div className="col-12 col-lg-3">
-                  <h3 className="display-6 fs-5 fw-bold text-center text-lg-start" data-aos="fade-in" data-aos-delay="100">
-                     Kontak
-                  </h3>
+               </motion.div>
+               <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.7, ease: "easeInOut" }}
+                  className="col-12 col-lg-3"
+               >
+                  <h3 className="display-6 fs-5 fw-bold text-center text-lg-start">Kontak</h3>
                   <div className="d-flex flex-column align-items-center align-items-lg-start gap-2" data-aos="fade-in" data-aos-delay="200">
                      {contacts.map((item, idx) => (
                         <Contact {...item} key={idx} />
                      ))}
                   </div>
-               </div>
-               <div className="col-12 col-lg-3">
-                  <h3 className="display-6 fs-5 fw-bold" data-aos="fade-in" data-aos-delay="100">
-                     Jam Operasional
-                  </h3>
-                  <p className="mb-0" data-aos="fade-in" data-aos-delay="200">
-                     Senin - Sabtu : 08:00 - 18:00
-                  </p>
-                  <p className="mb-0" data-aos="fade-in" data-aos-delay="100">
-                     Minggu/Merah : Tutup
-                  </p>
-               </div>
+               </motion.div>
+               <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  className="col-12 col-lg-3"
+               >
+                  <h3 className="display-6 fs-5 fw-bold">Jam Operasional</h3>
+                  <p className="mb-0">Senin - Sabtu : 08:00 - 18:00</p>
+                  <p className="mb-0">Minggu/Merah : Tutup</p>
+               </motion.div>
 
                <div className="col-12 border-top py-2">
                   <p className="text-center mb-0">Copyright {new Date().getFullYear()} - JELUPANG JAYA KANOPI</p>

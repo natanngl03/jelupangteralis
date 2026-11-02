@@ -1,4 +1,5 @@
 import { Head } from "vite-react-ssg";
+import { motion } from "motion/react";
 import MyGallery from "../ui/ImageGallery";
 import videos from "../../json/videos.json";
 import VideoModal from "../ui/VideoModal";
@@ -30,41 +31,70 @@ export default function PageDetail({ data }: { data: any }) {
          <div className="container py-7">
             <div className="row g-4">
                {data.totalImg == 1 && (
-                  <div className="col-12 col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                  <motion.div
+                     initial={{ opacity: 0, x: -30 }}
+                     whileInView={{ opacity: 1, x: 0 }}
+                     viewport={{ once: true, amount: 0.2 }}
+                     transition={{ duration: 0.7, ease: "easeInOut" }}
+                     className="col-12 col-lg-6"
+                  >
                      <ImageComp
                         src={getImage(data.totalImage, data.imageName)?.[0]?.original}
                         alt="kanopi"
                         loading="lazy"
                         imgStyle="w-100 rounded-3"
                      />
-                  </div>
+                  </motion.div>
                )}
 
                {data.totalImg > 1 && (
-                  <div className="col-12 col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                  <motion.div
+                     initial={{ opacity: 0, x: -30 }}
+                     whileInView={{ opacity: 1, x: 0 }}
+                     viewport={{ once: true, amount: 0.2 }}
+                     transition={{ duration: 0.7, ease: "easeInOut" }}
+                     className="col-12 col-lg-6"
+                  >
                      <MyGallery images={getImage(data.totalImg, data.imageName)} />
-                  </div>
+                  </motion.div>
                )}
 
                <div className={`col-12 col-lg-6`}>
                   <div className=" d-flex flex-column justify-content-between">
                      {data?.desc && (
-                        <p data-aos="fade-up" data-aos-delay="100">
+                        <motion.p
+                           initial={{ opacity: 0, y: 30 }}
+                           whileInView={{ opacity: 1, y: 0 }}
+                           viewport={{ once: true, amount: 0.2 }}
+                           transition={{ duration: 0.7, ease: "easeInOut" }}
+                        >
                            {data?.desc}
-                        </p>
+                        </motion.p>
                      )}
 
                      {data?.spec && data.spec?.length > 0 && (
                         <div>
-                           <p className="m-0" data-aos="fade-up" data-aos-delay="100">
+                           <motion.p
+                              className="m-0"
+                              initial={{ opacity: 0, y: 30 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              viewport={{ once: true, amount: 0.2 }}
+                              transition={{ duration: 0.75, ease: "easeInOut" }}
+                           >
                               Spesifikasi :
-                           </p>
+                           </motion.p>
 
                            <ul>
                               {data?.spec?.map((item: any, idx: number) => (
-                                 <li key={idx} data-aos="fade-up" data-aos-delay={`${idx + 1}00`}>
+                                 <motion.li
+                                    key={idx}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    transition={{ duration: Number(`0.8${idx + 1}`), ease: "easeInOut" }}
+                                 >
                                     {item}
-                                 </li>
+                                 </motion.li>
                               ))}
                            </ul>
                         </div>
@@ -72,29 +102,50 @@ export default function PageDetail({ data }: { data: any }) {
 
                      {data?.variant && data.variant?.length > 0 && (
                         <div>
-                           <p className="m-0" data-aos="fade-up" data-aos-delay="100">
+                           <motion.p
+                              className="m-0"
+                              initial={{ opacity: 0, y: 30 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              viewport={{ once: true, amount: 0.2 }}
+                              transition={{ duration: 0.75, ease: "easeInOut" }}
+                           >
                               Variant:
-                           </p>
+                           </motion.p>
 
                            <ul>
                               {data?.variant?.map((item: any, idx: number) => (
-                                 <li key={idx} data-aos="fade-up" data-aos-delay={`${idx + 1}00`}>
+                                 <motion.li
+                                    key={idx}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    transition={{ duration: Number(`0.8${idx + 1}`), ease: "easeInOut" }}
+                                 >
                                     {item}
-                                 </li>
+                                 </motion.li>
                               ))}
                            </ul>
                         </div>
                      )}
 
                      <div className="d-flex flex-column gap-3  text-center text-lg-start">
-                        <div data-aos="fade-up" data-aos-delay="100">
+                        <motion.div
+                           initial={{ opacity: 0, y: 30 }}
+                           whileInView={{ opacity: 1, y: 0 }}
+                           viewport={{ once: true, amount: 0.2 }}
+                           transition={{ duration: 0.7, ease: "easeInOut" }}
+                        >
                            <p className="m-0 fw-bold">Harga Mulai Dari:</p>
                            <p className="mb-3 fw-bold fs-3">{data.price}</p>
-                        </div>
+                        </motion.div>
 
                         {/* <div className="btn btn-primary w-100">Konsultasi</div> */}
 
-                        <a
+                        <motion.a
+                           initial={{ opacity: 0, y: 30 }}
+                           whileInView={{ opacity: 1, y: 0 }}
+                           viewport={{ once: true, amount: 0.2 }}
+                           transition={{ duration: 0.7, ease: "easeInOut" }}
                            href={waOrder(data?.pageTitle)}
                            target="_blank"
                            rel="noopener noreferrer"
@@ -104,7 +155,7 @@ export default function PageDetail({ data }: { data: any }) {
                         >
                            <FaWhatsapp size={25} className="me-2" />
                            <span>Konsultasi</span>
-                        </a>
+                        </motion.a>
                      </div>
                   </div>
                </div>

@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import Section from "../ui/Section";
 import Card from "../ui/Card";
 import MasonryGrid from "../ui/MasonryGrid";
@@ -47,16 +48,29 @@ export default function Service({ withTitle }: { withTitle: boolean }) {
       <>
          <Section id="service" className="py-6 py-lg-7 border-bottom ">
             {withTitle && (
-               <h2 className="mb-5 text-center text-primary" data-aos="fade-up" data-aos-delay="100">
+               <motion.h2
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.7, ease: "easeInOut" }}
+                  className="mb-5 text-center text-primary"
+               >
                   Temukan Layanan <span className="text-secondary">Lainnya</span>
-               </h2>
+               </motion.h2>
             )}
 
             <MasonryGrid className="row g-2 g-lg-4">
                {data.map((item, idx) => (
-                  <div className="col-6 col-lg-4 masonry-item" key={idx} data-aos="fade-up" data-aos-delay="100">
+                  <motion.div
+                     key={idx}
+                     initial={{ opacity: 0, y: 30 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     viewport={{ once: true, amount: 0.2 }}
+                     transition={{ duration: Number(`0.7${idx}`), ease: "easeInOut" }}
+                     className="col-6 col-lg-4 masonry-item"
+                  >
                      <Card title={item.title} description={item.description} imgSrc={item.imgSrc} page={item.page} />
-                  </div>
+                  </motion.div>
                ))}
             </MasonryGrid>
          </Section>

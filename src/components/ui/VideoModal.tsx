@@ -1,23 +1,11 @@
-import { Fragment, useState, useEffect, useRef } from "react";
+import { Fragment, useState } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import { FaYoutube } from "react-icons/fa";
 import Spinner from "./Spinner";
+import VideoThumbnail from "./VideoThumbnail";
 
 export default function VideoModal({ videoID }: { videoID: string }) {
    const [play, setPlay] = useState<boolean>(false);
    const [videoLoading, setVideoLoading] = useState<boolean>(true);
-   const [thumbnailLoading, setThumbnailLoading] = useState<boolean>(true);
-   const thumbnailRef = useRef<HTMLImageElement>(null);
-
-   useEffect(() => {
-      const img = thumbnailRef.current;
-
-      if (!img) return;
-
-      if (img.complete) {
-         setThumbnailLoading(false);
-      }
-   }, []);
 
    const toggle = () => {
       setPlay((play) => !play);
@@ -25,33 +13,7 @@ export default function VideoModal({ videoID }: { videoID: string }) {
 
    return (
       <Fragment>
-         <div className="position-relative" onClick={toggle} style={{ cursor: "pointer" }}>
-            <img
-               ref={thumbnailRef}
-               src={`https://img.youtube.com/vi/${videoID}/mqdefault.jpg`}
-               alt="video thumbnail"
-               width="100%"
-               className="rounded"
-               loading="lazy"
-               onLoad={() => setThumbnailLoading(false)}
-               onError={() => setThumbnailLoading(false)}
-            />
-
-            {thumbnailLoading ? (
-               <Spinner />
-            ) : (
-               <FaYoutube
-                  className="text-danger rounded bg-white"
-                  size={30}
-                  style={{
-                     position: "absolute",
-                     top: "50%",
-                     left: "50%",
-                     transform: "translate(-50%, -50%)",
-                  }}
-               />
-            )}
-         </div>
+         <VideoThumbnail toggle={toggle} videoID={videoID} />
          <Modal isOpen={play} toggle={toggle} centered>
             <ModalHeader toggle={toggle}>Video Player</ModalHeader>
             <ModalBody>

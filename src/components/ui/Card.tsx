@@ -44,7 +44,7 @@ export default function Card({ title, description, imgSrc, page }: Props) {
                </p>
             </div>
             <a href={`/lainnya/${page}`} className="btn btn-primary mt-2" style={{ width: "100%" }}>
-               Selengkapnya
+               Lihat
             </a>
          </div>
 

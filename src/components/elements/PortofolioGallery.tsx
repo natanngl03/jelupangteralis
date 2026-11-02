@@ -1,12 +1,10 @@
-import { Fragment, useState, useRef, useEffect } from "react";
+import { Fragment } from "react";
+import { motion } from "motion/react";
 import Section from "../ui/Section";
 import GLightboxInit from "../ui/GLightboxInit";
-import Spinner from "../ui/Spinner";
+import ImageItem from "../ui/ImageItem";
 
 export default function PortofolioGallery() {
-   const [isLoading, setIsLoading] = useState<boolean>(true);
-   const imgRef = useRef<HTMLImageElement>(null);
-
    const images = () => {
       const kanopiKaca = [...Array(3)].map((_, idx) => `kanopi_kaca${idx + 1}.webp`);
       const kanopiOtomatis = [...Array(2)].map((_, idx) => `kanopi_otomatis${idx + 1}.webp`);
@@ -35,40 +33,22 @@ export default function PortofolioGallery() {
       ];
    };
 
-   useEffect(() => {
-      const img = imgRef.current;
-
-      if (!img) return;
-
-      if (img.complete) {
-         setIsLoading(false);
-      }
-   }, []);
-
    return (
       <Fragment>
          <GLightboxInit />
          <Section id="portofolio" className="bg-white py-5 py-lg-7 border-bottom">
             <div className="row g-2">
                {images().map((item, idx) => (
-                  <div className="col-6 col-lg-3 position-relative" data-aos="fade-in" data-aos-delay="100" key={idx}>
-                     <div className="card">
-                        <a href={`/img/product/${item}`} className="glightbox" data-gallery="portofolio-gallery">
-                           <img
-                              ref={imgRef}
-                              src={`/img/product/${item}`}
-                              className="card-img-top"
-                              alt="portofolio image"
-                              style={{ height: "200px", backgroundSize: "cover" }}
-                              loading="lazy"
-                              onLoad={() => setIsLoading(false)}
-                              onError={() => setIsLoading(false)}
-                           />
-                        </a>
-                     </div>
-
-                     {isLoading && <Spinner />}
-                  </div>
+                  <motion.div
+                     className="col-6 col-lg-3 position-relative"
+                     key={idx}
+                     initial={{ opacity: 0, y: 30 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     viewport={{ once: true, amount: 0.2 }}
+                     transition={{ duration: 0.7, ease: "easeInOut" }}
+                  >
+                     <ImageItem item={item} />
+                  </motion.div>
                ))}
             </div>
          </Section>

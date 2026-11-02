@@ -1,6 +1,8 @@
+import { motion } from "motion/react";
+
 export default function Fallback() {
    return (
-      <div
+      <motion.div
          style={{
             position: "fixed",
             top: 0,
@@ -14,11 +16,14 @@ export default function Fallback() {
             justifyContent: "center",
             alignItems: "center",
          }}
+         initial={{ opacity: 1 }}
+         exit={{ opacity: 0 }}
+         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
          <div className="spinner-border text-primary" role="status">
             <span className="visually-hidden">Loading...</span>
          </div>
          <p className="fst-italic">Loading...</p>
-      </div>
+      </motion.div>
    );
 }

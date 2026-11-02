@@ -1,12 +1,23 @@
 import { useEffect } from "react";
+import { motion } from "motion/react";
 import Section from "../ui/Section";
 import { FaStar, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 const testimonials = [
    {
+      name: "Karlina Zebua",
+      msg: "Baguss & rapi",
+      img: "/img/testimoni/karlina.png",
+   },
+   {
       name: "Esmelia Malau",
       msg: "pelayanannya bagus, sangat rekomen, mantap dan sukses selalu 💪👍👍",
       img: "/img/testimoni/esmelia.png",
+   },
+   {
+      name: "Aqilla Asyifa",
+      msg: "Jelupang jaya kanopi, hasil kerjanya rapih, tepat waktu dan untuk bahan yang digunakannya sesuai spesifikasi... <br /> mantap pokonya, next order lagi kalau ada project.",
+      img: "/img/testimoni/aqilla.png",
    },
    { name: "Hendra", msg: "Mantap pokoknya, pengerjaan nya cepat dan Rapih, harga nya juga bersahabat.", img: "/img/testimoni/hendra.png" },
    {
@@ -15,11 +26,6 @@ const testimonials = [
       img: "/img/testimoni/jenal.png",
    },
    { name: "Usup Sukabumi", msg: "Mantap om 👍", img: "/img/testimoni/usup.png" },
-   {
-      name: "Aqilla Asyifa",
-      msg: "Jelupang jaya kanopi, hasil kerjanya rapih, tepat waktu dan untuk bahan yang digunakannya sesuai spesifikasi... <br /> mantap pokonya, next order lagi kalau ada project.",
-      img: "/img/testimoni/aqilla.png",
-   },
    {
       name: "Neng Depi",
       msg: "mantul hasilnya rapih dan memuaskan",
@@ -44,22 +50,46 @@ export default function Testimonial({ bgColor = "bg-white" }: Props) {
    }, []);
 
    return (
-      <Section id="testimonial" className={`${bgColor} py-7`}>
-         <div className="container-fluid testimonial pb-5">
+      <Section id="testimonial" className={`${bgColor} pt-7 pb-0`}>
+         <div className="container-fluid testimonial pb-0">
             <div className="container pb-5">
-               <div className="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style={{ maxWidth: "800px" }}>
-                  <h2 className="text-primary" data-aos="fade-up" data-aos-delay="100">
+               <div className="text-center mx-auto pb-5">
+                  <motion.h2
+                     initial={{ opacity: 0, y: 30 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     viewport={{ once: true, amount: 0.2 }}
+                     transition={{ duration: 0.6, ease: "easeInOut" }}
+                     className="text-primary"
+                  >
                      Testimoni Pelanggan
-                  </h2>
-                  <h3 className="display-5 mb-4" data-aos="fade-up" data-aos-delay="200">
+                  </motion.h2>
+                  <motion.h3
+                     initial={{ opacity: 0, y: 30 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     viewport={{ once: true, amount: 0.2 }}
+                     transition={{ duration: 0.65, ease: "easeInOut" }}
+                     className="display-5 mb-4"
+                  >
                      Apa Kata Pelanggan Kami?
-                  </h3>
+                  </motion.h3>
 
-                  <p className="mb-0" data-aos="fade-up" data-aos-delay="300">
+                  <motion.p
+                     initial={{ opacity: 0, y: 30 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     viewport={{ once: true, amount: 0.2 }}
+                     transition={{ duration: 0.7, ease: "easeInOut" }}
+                     className="mb-0"
+                  >
                      Kepercayaan dan kepuasan pelanggan adalah prioritas kami. Simak pengalaman mereka setelah menggunakan jasa Jelupang Jaya Kanopi.
-                  </p>
+                  </motion.p>
                </div>
-               <div className="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.2s">
+               <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.75, ease: "easeInOut" }}
+                  className="owl-carousel testimonial-carousel"
+               >
                   {testimonials.map((item, idx) => (
                      <div className="testimonial-item" key={idx}>
                         <div className="testimonial-quote-left">
@@ -91,7 +121,7 @@ export default function Testimonial({ bgColor = "bg-white" }: Props) {
                         </div>
                      </div>
                   ))}
-               </div>
+               </motion.div>
             </div>
          </div>
       </Section>

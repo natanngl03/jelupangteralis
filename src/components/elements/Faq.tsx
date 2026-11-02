@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useState, forwardRef } from "react";
+import { motion } from "motion/react";
 import Section from "../ui/Section";
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem } from "reactstrap";
 import Json from "../../json/faq.json";
+
+const AccordionItemMotion = motion.create(
+   forwardRef<HTMLDivElement, React.ComponentProps<typeof AccordionItem>>((props, ref) => <AccordionItem {...props} innerRef={ref} />),
+);
 
 export default function Faq() {
    const [open, setOpen] = useState<string>("1");
@@ -18,28 +23,50 @@ export default function Faq() {
       <Section id="faq" className="py-7 border-bottom">
          <div className="row ">
             <div className="col-12 col-lg-5">
-               <h2 className="text-center text-lg-start" data-aos="fade-up" data-aos-delay={`100`}>
+               <motion.h2
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.7, ease: "easeInOut" }}
+                  className="text-center text-lg-start"
+                  data-aos="fade-up"
+                  data-aos-delay={`100`}
+               >
                   Yang Sering Ditanyakan?
-               </h2>
-               <p className="mb-4 text-center text-lg-start" data-aos="fade-up" data-aos-delay={`200`}>
+               </motion.h2>
+               <motion.p
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  className="mb-4 text-center text-lg-start"
+               >
                   Berikut adalah hal-hal yang paling sering ditanyakan ke kami
-               </p>
-               <img
+               </motion.p>
+               <motion.img
                   src="/img/question.svg"
                   alt="question image"
                   width="80%"
                   className="d-block mx-auto m-lg-0"
-                  data-aos="fade-up"
-                  data-aos-delay={`100`}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
                />
             </div>
             <div className="col-12 col-lg-7">
                <Accordion open={open} toggle={toggle} className="pt-5 pt-lg-0">
                   {Json.map((item, idx) => (
-                     <AccordionItem key={idx} data-aos="fade-up" data-aos-delay={`200`}>
+                     <AccordionItemMotion
+                        key={idx}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.8, ease: "easeInOut" }}
+                     >
                         <AccordionHeader targetId={`${idx + 1}`}>{item.question}</AccordionHeader>
                         <AccordionBody accordionId={`${idx + 1}`}>{item.answer}</AccordionBody>
-                     </AccordionItem>
+                     </AccordionItemMotion>
                   ))}
                </Accordion>
             </div>

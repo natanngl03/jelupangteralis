@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import MasonryGrid from "../../components/ui/MasonryGrid";
 import Header from "../../components/ui/Header";
 import ExperienceDivider from "../../components/elements/ExperienceDivider";
@@ -27,9 +28,16 @@ export const KanopiItem = () => {
    return (
       <MasonryGrid className="row g-2 g-lg-4">
          {KanopiJson.map((item, idx) => (
-            <div className="col-6 col-lg-4 masonry-item" key={idx} data-aos="fade-up" data-aos-delay="100">
+            <motion.div
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, amount: 0.2 }}
+               transition={{ duration: Number(`0.7${idx}`), ease: "easeInOut" }}
+               className="col-6 col-lg-4 masonry-item"
+               key={idx}
+            >
                <KanopiCard title={item.title} imgSrc={item.cardImg} alt={item.page} href={`/kanopi/${item.page}`} price={item.price} />
-            </div>
+            </motion.div>
          ))}
       </MasonryGrid>
    );
@@ -47,7 +55,7 @@ export const KanopiCard = (props: { title: string; imgSrc: string; alt: string; 
                <span className="fw-bold price">{props.price}</span>
             </p>
             <a href={props.href} className="btn btn-primary w-100">
-               Detail
+               Lihat
             </a>
          </div>
       </div>

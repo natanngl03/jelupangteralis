@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { motion } from "motion/react";
 
 export default function Hero() {
    useEffect(() => {
@@ -15,7 +16,13 @@ export default function Hero() {
    }, []);
 
    return (
-      <section className="hero-wrapper" data-aos="fade-in" data-aos-delay="100">
+      <motion.section
+         className="hero-wrapper"
+         initial={{ opacity: 0 }}
+         whileInView={{ opacity: 1 }}
+         transition={{ duration: 0.7, ease: "easeIn" }}
+         viewport={{ once: true, amount: 0.2 }}
+      >
          <div className="header-carousel owl-carousel position-relative">
             {[...Array(3)].map((_, idx) => (
                <div className="header-carousel-item" key={idx}>
@@ -32,6 +39,6 @@ export default function Hero() {
                </div>
             ))}
          </div>
-      </section>
+      </motion.section>
    );
 }

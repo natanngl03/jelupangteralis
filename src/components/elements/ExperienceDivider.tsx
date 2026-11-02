@@ -3,7 +3,7 @@ import Section from "../ui/Section";
 
 export default function ExperienceDivider() {
    return (
-      <Section id="counter" className="bg-primary py-5">
+      <Section id="counter" className="bg-primary py-5" withMotion>
          <div className="d-flex flex-column flex-lg-row justify-content-lg-between gap-5 gap-lg-0">
             <div className="text-white fw-bold text-center ">
                <Counter end={11} suffix="+" />

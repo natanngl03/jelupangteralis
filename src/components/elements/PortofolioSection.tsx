@@ -1,10 +1,11 @@
 import { Fragment, useState, useRef, useEffect } from "react";
+import { motion } from "motion/react";
 import Section from "../ui/Section";
 import { FaArrowRight } from "react-icons/fa";
 import GLightboxInit from "../ui/GLightboxInit";
 import Spinner from "../ui/Spinner";
 
-export default function PortofolioSection() {
+export default function PortofolioSection({ bgColor = "bg-white" }: { bgColor?: string }) {
    const [isLoading, setIsLoading] = useState<boolean>(true);
    const imgRef = useRef<HTMLImageElement>(null);
 
@@ -21,10 +22,16 @@ export default function PortofolioSection() {
    return (
       <Fragment>
          <GLightboxInit />
-         <Section id="portofolio" className="bg-white py-5 py-lg-7 border-bottom">
-            <h2 className="mb-5 text-center text-primary" data-aos="fade-up" data-aos-delay="100">
+         <Section id="portofolio" className={`${bgColor} py-5 py-lg-7 border-bottom`}>
+            <motion.h2
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, amount: 0.2 }}
+               transition={{ duration: 0.7, ease: "easeInOut" }}
+               className="mb-5 text-center text-primary"
+            >
                Portofolio <span className="text-secondary">Kami</span>
-            </h2>
+            </motion.h2>
 
             <div className="row g-2">
                {[
@@ -37,7 +44,14 @@ export default function PortofolioSection() {
                   "kanopi_standard2",
                   "teralis3_Watermarked",
                ].map((item, idx) => (
-                  <div className="col-6 col-lg-3 position-relative wow fadeIn" data-aos="fade-up" data-aos-delay={`${idx + 1}00`} key={idx}>
+                  <motion.div
+                     key={idx}
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     viewport={{ once: true, amount: 0.2 }}
+                     transition={{ duration: Number(`0.8${idx + 1}`), ease: "easeInOut" }}
+                     className="col-6 col-lg-3 position-relative wow fadeIn"
+                  >
                      <div className="card">
                         <a href={`/img/product/${item}.webp`} className="glightbox" data-gallery="portofolio-section">
                            <img
@@ -53,15 +67,23 @@ export default function PortofolioSection() {
                         </a>
                      </div>
                      {isLoading && <Spinner />}
-                  </div>
+                  </motion.div>
                ))}
             </div>
 
             <div className="mt-5 d-flex justify-content-end">
-               <a href="/portofolio" className="btn border border-2 border-primary text-primary fw-bold wow fadeIn" data-wow-delay="0.1s">
+               <motion.a
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  href="/portofolio"
+                  className="btn border border-2 border-primary text-primary fw-bold wow fadeIn"
+                  data-wow-delay="0.1s"
+               >
                   Lihat Selengkapnya
                   <FaArrowRight className="ms-2" />
-               </a>
+               </motion.a>
             </div>
          </Section>
       </Fragment>
